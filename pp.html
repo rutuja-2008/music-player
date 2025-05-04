@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audible Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .player {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .controls button {
+    background: #444;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background: #666;
+  }
+</style>
+</head>  
+</head>
+<body>
+  <div class="player">
+    <h2>🎵 My Music Player</h2>
+    <audio id="audio-player" src="C:\Users\Intel\Desktop\gorila-315977 (1).mp3"></audio>
+    <div class="controls">
+      <button id="play-btn">▶️ Play</button>
+      <button id="pause-btn">⏸️ Pause</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const audio = document.getElementById('audio-player');
+const playBtn = document.getElementById('play-btn');
+const pauseBtn = document.getElementById('pause-btn');
+
+playBtn.addEventListener('click', () => {
+  audio.play();
+});
+
+pauseBtn.addEventListener('click', () => {
+  audio.pause();
+});
+
+  </script>
+</body>
+</html>
